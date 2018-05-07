@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+    <title>Mail title</title>
+
+    <!-- Web Font definition-->
+
+    <!-- Most cases (incert link to your font) -->
+    <!--[if !mso]><!-->
+    <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'> -->
+    <!--<![endif]-->
+
+    <!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. -->
+    <!--[if mso]>
+        <style>
+            * {
+                font-family: sans-serif !important;
+            }
+        </style>
+    <![endif]-->
+
+    <!-- Web Font END-->
+
+    <!-- CSS RESET -->
+    <style>
+        /* Remove spaces around the email design added by some email clients. */
+        /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+
+        /* What it does: Stops email clients resizing small text. */
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* What it does: Centers email on Android 4.4 */
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        /* What it does: Stops Outlook from adding extra spacing to tables. */
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+        table table table {
+            table-layout: auto;
+        }
+
+        /* What it does: Uses a better rendering method when resizing images in IE. */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /****** EMAIL CLIENT BUG FIXES - BEST NOT TO CHANGE THESE ********/
+        /* Forces Gmail apps a aficher l'email format desktop */
+        .monhide {
+            display: none;
+        }
+
+        /* Forces Hotmail to display emails at full width. */
+        .ExternalClass {
+            width: 100%;
+        }
+
+        /* Forces Hotmail to display normal line spacing. */
+        .ExternalClass * {
+            line-height: 100%
+        }
+
+        .ReadMsgBody,
+        .ExternalClass {
+            width: 100%; /* Outlook.com full-width fix. */
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%; /* Outlook.com line-height fix. */
+        }
+
+        #outlook a {
+            padding: 0; /* Outlook 2007+ "view in browser" fix. */
+        }
+    </style>
+    <!-- CSS RESET END-->
+
+
+    <!-- What it does: Makes background images in 72ppi Outlook render at correct size. -->
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:AllowPNG/>
+            <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+</head>
+
+<!-- background-color is defined in 3 places: 
+    1. body for most mail agents
+    2. center tag for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+    3. table for mso (Windows 10 mail agent)
+-->
+<body width="100%" style="margin: 0; mso-line-height-rule: exactly; background-color: #ececec; color: #222222; font-family: Arial, Helvetica, sans-serif;">
+    <center class="mail" style="display: block; width: 100%; background-color: #ececec">
+    <!--[if mso | IE]>
+    <table class="mail" role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ececec;">
+    <tr>
+    <td>
+    <![endif]-->
+
+    <table class="mail--header"
+        role="presentation"
+        cellspacing="0"
+        cellpadding="0"
+        border="0"
+        align="center"
+        width="640px"
+        style="max-width: 640px; background-color: #333333; color: #f7f7f7; text-align: center;">
+        <tr>
+            <td>
+                <h1>Some title</h1>
+            </td>
+        </tr>
+    </table>
+
+    <!--[if mso | IE]>
+    </td>
+    </tr>
+    </table>
+    <![endif]-->
+    </center>
+</body>
+</html>
